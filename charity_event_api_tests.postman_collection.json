@@ -1,0 +1,126 @@
+{
+    "info": {
+        "name": "Charity and Event API Tests",
+        "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+        "description": "Postman test collection for QR Donation System's Charity and Event API endpoints.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "GET Charity by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/charity/12345",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "charity",
+                        "12345"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "GET Charity List",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/charity/list",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "charity",
+                        "list"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "POST New Charity",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Helping Hands\", \"address\": \"123 Charity Lane\", \"cause\": \"Food Relief\", \"logo\": \"http://example.com/logo.png\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/charity",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "charity"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "POST New Event",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"charityId\": \"12345\", \"eventName\": \"Winter Blanket Drive\", \"date\": \"2025-06-15\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/event",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "event"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "GET Event List",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/event/list",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "event",
+                        "list"
+                    ]
+                }
+            }
+        }
+    ]
+}
